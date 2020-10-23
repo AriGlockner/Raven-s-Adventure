@@ -66,8 +66,7 @@
     <Compile Include="Assets\ColorPickerTriangle\Example\example.cs" />
     <Compile Include="Assets\ColorPickerTriangle\Scripts\ColorPickerTriangle.cs" />
     <Compile Include="Assets\PlayerMainScript.cs" />
-    <Compile Include="Assets\Scripts\Main Menu\MainMenu.cs" />
-    <Compile Include="Assets\Scripts\Main Menu\MouseHover.cs" />
+    <Compile Include="Assets\Scripts\Main Menu\Quit.cs" />
     <Compile Include="Assets\Scripts\Main Menu\SwitchScene.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
