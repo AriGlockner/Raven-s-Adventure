@@ -18,13 +18,13 @@ public class PlayerMovement : MonoBehaviour
         currentAngle = transform.rotation.y * Mathf.PI / 180;
 
         //Movement Inputs
-        if (Input.GetKey("left")) transform.Rotate(0f, -rotateSpeed * Time.deltaTime, 0f);
-        if (Input.GetKey("right")) transform.Rotate(0f, rotateSpeed * Time.deltaTime, 0f);
-        if (Input.GetKey("down"))
+        if (Input.GetKey(KeyCode.A)) transform.Rotate(0f, -rotateSpeed * Time.deltaTime, 0f);
+        if (Input.GetKey(KeyCode.D)) transform.Rotate(0f, rotateSpeed * Time.deltaTime, 0f);
+        if (Input.GetKey(KeyCode.S))
         {
             transform.Translate(Mathf.Sin(currentAngle) * Time.deltaTime * playerSpeed, 0f, Mathf.Cos(currentAngle) * Time.deltaTime * playerSpeed);
         }
-        if (Input.GetKey("up"))
+        if (Input.GetKey(KeyCode.W))
         {
             transform.Translate(-Mathf.Sin(currentAngle) * Time.deltaTime * playerSpeed, 0f, -Mathf.Cos(currentAngle) * Time.deltaTime * playerSpeed);
         }
