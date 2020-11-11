@@ -27,7 +27,7 @@ public class RotateIntake : MonoBehaviour
         minRotation = -45f;
         maxRotation = 40f;
 
-        liftMin = 2.5f;
+        liftMin = 1.5f;
         liftMax = 10.5f;
 
         rotateSpeed = 1f;
@@ -54,28 +54,12 @@ public class RotateIntake : MonoBehaviour
     //Rotate methods
     void rotateUp()
     {
-        /*
-        //Check out of bounds
-        if (rotation > maxRotation)
-        {
-            transform.Rotate(maxRotation, 0f, 0f);
-            return;
-        }
-        */
-        //Rotate
         Vector3 rotate = new Vector3(maxRotation, 0f, 0f);
         transform.Rotate(rotate * Time.deltaTime * rotateSpeed);
     }
 
     void rotateDown()
     {
-        /*
-        if (rotation < minRotation)
-        {
-            transform.Rotate(maxRotation, 0f, 0f);
-            return;
-        }
-        */
         Vector3 rotate = new Vector3(minRotation, 0f, 0f);
         transform.Rotate(rotate * (Time.deltaTime * rotateSpeed));
     }
