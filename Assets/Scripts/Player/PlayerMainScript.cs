@@ -1,18 +1,26 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMainScript : MonoBehaviour
 {
-    // Start is called before the first frame update
+    
+
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKey(KeyCode.P)) pauseGame();
     }
+
+    void pauseGame()
+    {
+        Time.timeScale = 0f;
+        SceneManager.LoadScene("Pause Screen");
+    }
+    
 }

@@ -19,7 +19,9 @@ public class moveBall : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         if (Input.GetKey(KeyCode.LeftArrow))
+        {
             insideIntake = true;
+        }
     }
 
     void OnTriggerStay(Collider other)

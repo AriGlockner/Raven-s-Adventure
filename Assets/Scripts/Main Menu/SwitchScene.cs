@@ -5,14 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class SwitchScene : MonoBehaviour
 {
-    
-    void Start()
-    {
-        Debug.Log("Start!");
-    }
-
     public void btn_change_scene(string sceneName)
     {
+        Debug.Log("Go to " + sceneName + "sceneName");
+        /*
+        if (sceneName == "MainScene")
+            Time.timeScale = 1f;
+        */
         SceneManager.LoadScene(sceneName);
     }
 }

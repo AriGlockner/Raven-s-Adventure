@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -14,6 +15,8 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        //if (Input.GetKey(KeyCode.P)) SceneManager.LoadScene("Pause Screen");
+
         //Calculates the angle in terms of pi
         currentAngle = transform.rotation.y * Mathf.PI / 180;
 

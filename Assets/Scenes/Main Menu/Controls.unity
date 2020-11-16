@@ -1586,7 +1586,7 @@ TextMesh:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2090972227}
-  m_Text: Pause - Escape Key
+  m_Text: Pause - P
   m_OffsetZ: 0
   m_CharacterSize: 1
   m_LineSpacing: 1
