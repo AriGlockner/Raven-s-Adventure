@@ -6,6 +6,7 @@ TagManager:
   tags:
   - PickableObject
   - Intake
+  - ground
   layers:
   - Default
   - TransparentFX

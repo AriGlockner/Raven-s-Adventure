@@ -2,29 +2,25 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent (typeof (Rigidbody))]
 public class position : MonoBehaviour
 {
-    /*
-    public bool insideIntake;
+    public float maxSpeed;
+    private Rigidbody rb;
 
     void Start()
     {
-        insideIntake = false;
+        rb = GetComponent<Rigidbody>();
     }
 
     void Update()
     {
-        
+        if (rb.velocity.magnitude > maxSpeed)
+            slowDown();
     }
 
-    void onCollision(Collider other)
+    void slowDown()
     {
-        if (other.tag == "Intake" || other.tag == "Untagged")
-        {
-            print("Collision detected: " + other.tag);
-            transform.position = other.transform.position;
-
-        }
+        rb.velocity = Vector3.ClampMagnitude(rb.velocity, maxSpeed);
     }
-    */
 }

@@ -6,33 +6,66 @@ using UnityEngine.SceneManagement;
 public class PlayerMovement : MonoBehaviour
 {
 
-    //Player Speed
-    public float playerSpeed = 10f;
+    [Header("Player Movement")]
+    public float playerAcceleration;
+    private Rigidbody rb;
+    public float mass;
+    public float maxSpeed;
 
-    //Rotation
+    [Header("Player Rotation")]
     public float rotateSpeed = 180f;
-    private float currentAngle;
+    public float currentAngle;
+
+    [Header("Forces stuff")]
+    public Vector3 movement;
+
+    void Start()
+    {
+        rb = GetComponent<Rigidbody>();
+        mass = rb.mass;
+    }
 
     void Update()
     {
-        //if (Input.GetKey(KeyCode.P)) SceneManager.LoadScene("Pause Screen");
-
         //Calculates the angle in terms of pi
-        currentAngle = transform.rotation.y * Mathf.PI / 180;
+        //currentAngle = transform.rotation.y * Mathf.PI / 180;
+        currentAngle = transform.rotation.y * 180;
 
-        //Movement Inputs
-        if (Input.GetKey(KeyCode.A)) transform.Rotate(0f, -rotateSpeed * Time.deltaTime, 0f);
-        if (Input.GetKey(KeyCode.D)) transform.Rotate(0f, rotateSpeed * Time.deltaTime, 0f);
-        if (Input.GetKey(KeyCode.S))
-        {
-            transform.Translate(Mathf.Sin(currentAngle) * Time.deltaTime * playerSpeed, 0f, Mathf.Cos(currentAngle) * Time.deltaTime * playerSpeed);
-        }
+        movement = new Vector3(0f, 0f, 0f);
+
+        //Rotate Player
+        if (Input.GetKey(KeyCode.A))
+            transform.Rotate(0f, -rotateSpeed * Time.deltaTime, 0f);
+
+        if (Input.GetKey(KeyCode.D))
+            transform.Rotate(0f, rotateSpeed * Time.deltaTime, 0f);
+
+        //Player Movements
         if (Input.GetKey(KeyCode.W))
-        {
-            transform.Translate(-Mathf.Sin(currentAngle) * Time.deltaTime * playerSpeed, 0f, -Mathf.Cos(currentAngle) * Time.deltaTime * playerSpeed);
-        }
+            moveForward();
+
+        else if (Input.GetKey(KeyCode.S))
+            moveBackwards();
+
+        applyForces();
     }
 
-   
+    void moveForward()
+    {
+        movement = -transform.forward.normalized;
+    }
+
+    void moveBackwards()
+    {
+        movement = transform.forward.normalized;
+    }
+
+    void applyForces()
+    {
+        float speed = rb.velocity.magnitude;
+        speed *= speed;
+
+        rb.AddForce(movement * (playerAcceleration - speed) * Time.deltaTime * mass, ForceMode.Impulse);
+    }
 
 }
