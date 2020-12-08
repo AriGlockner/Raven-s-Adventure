@@ -787,7 +787,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Achiements - 1
+          m_StringArgument: Achievements1
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &182725975
@@ -851,8 +851,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 321798868}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -750, y: -750, z: -100}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalPosition: {x: 325, y: -200, z: -100}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 182725973}
   - {fileID: 699475786}
@@ -1914,8 +1914,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1142971014}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 750, y: -750, z: -100}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalPosition: {x: -225, y: -200, z: -100}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1191958869}
   - {fileID: 952971652}
@@ -2011,7 +2011,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: MainScene
+          m_StringArgument: Testing Scene
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1191958871

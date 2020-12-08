@@ -4,27 +4,51 @@ using UnityEngine;
 
 public class ballScored : MonoBehaviour
 {
-    public bool isScored;
+    [Header("Balls:")]
+    private ballScored ball;
+    public isComplete comp;
+    public int score;
+    public int numToScore;
 
-    public bool getScored()
+    public void setScore(bool positive)
     {
-        return isScored;
+        if (positive)
+            score++;
+        else
+            score--;
+
+        if (score == numToScore)
+            achievementComplete();
+        else if (score < 0)
+            throw new System.Exception("The score cannot be less than 0.");
     }
 
     void Start()
     {
-        isScored = false;
+        ball = GameObject.FindWithTag("Canvas").GetComponent<ballScored>();
+        comp = isComplete.done;
+
+        DontDestroyOnLoad(ball);
+        //DontDestroyOnLoad(comp);
     }
 
-    void OnTriggerEnter(Collider other)
+    
+    void Update()
     {
-        if (other.gameObject.name == "CargoBall")
-           isScored = true;
+        if (Input.GetKeyDown(KeyCode.G))
+        {
+            setScore(true);
+            /*
+            score++;
+            if (score == numToScore)
+                achievementComplete();
+            */
+        }            
     }
+    
 
-    void OnTriggerExit(Collider other)
+    public static void achievementComplete()
     {
-        if (other.gameObject.name == "CargoBall")
-            isScored = false;
+        isComplete.isFinished(true);
     }
 }

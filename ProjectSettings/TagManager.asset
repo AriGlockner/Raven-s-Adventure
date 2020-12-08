@@ -7,6 +7,8 @@ TagManager:
   - PickableObject
   - Intake
   - ground
+  - Canvas
+  - Completed
   layers:
   - Default
   - TransparentFX

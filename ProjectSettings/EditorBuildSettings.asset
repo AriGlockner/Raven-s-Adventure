@@ -18,6 +18,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Pause Scenes/Pause Screen.unity
     guid: f931fc395aa6c4b72a493507c9c49c87
   - enabled: 1
-    path: Assets/Scenes/Pause Scenes/Achievements - 1.unity
+    path: Assets/Scenes/Pause Scenes/Achievements1.unity
     guid: 335e90d4835a14a298f7b0e1b5472403
+  - enabled: 1
+    path: Assets/Scenes/Testing Scene.unity
+    guid: c0bd832c59d4c4713826a61e15bce058
   m_configObjects: {}

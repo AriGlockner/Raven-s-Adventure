@@ -67,6 +67,9 @@
     <Compile Include="Assets\Scripts\Game Pieces\Ball\position.cs" />
     <Compile Include="Assets\Scripts\Game Pieces\Ball\scoreBall.cs" />
     <Compile Include="Assets\Scripts\Game Pieces\ballScored.cs" />
+    <Compile Include="Assets\Scripts\Game Pieces\ballScoredAtLocation.cs" />
+    <Compile Include="Assets\Scripts\Game Pieces\isComplete.cs" />
+    <Compile Include="Assets\Scripts\Game Pieces\totalBallsScored.cs" />
     <Compile Include="Assets\Scripts\Main Menu\Quit.cs" />
     <Compile Include="Assets\Scripts\Main Menu\SwitchScene.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerMainScript.cs" />
@@ -74,6 +77,7 @@
     <Compile Include="Assets\Scripts\Player\RotateIntake.cs" />
     <Compile Include="Assets\Scripts\Player\moveBall.cs" />
     <Compile Include="Assets\Scripts\Player\rotateWheel.cs" />
+    <Compile Include="Assets\Scripts\setAchiementComplete.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
