@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class isComplete : MonoBehaviour
 {
+    
     public static isComplete done;
     private static bool completed;
     public bool comp;
@@ -13,19 +14,22 @@ public class isComplete : MonoBehaviour
         completed = false;
         done = GameObject.FindWithTag("Completed").GetComponent<isComplete>();
 
-        DontDestroyOnLoad(done);
+        //DontDestroyOnLoad(done);
     }
 
     void Update()
     {
-        comp = completed;
+        if (completed != comp)
+        {
+            comp = completed;
+        }
     }
 
     public static void isFinished(bool comp)
     {
+        Debug.Log("Achievement Complete! 2");
         completed = comp;
-
-        if (comp)
-            setAchiementComplete.setActive(comp);
+        setAchiementComplete.setActive(comp);
     }
+    
 }

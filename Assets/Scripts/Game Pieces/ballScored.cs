@@ -7,6 +7,7 @@ public class ballScored : MonoBehaviour
     [Header("Balls:")]
     private ballScored ball;
     public isComplete comp;
+    //public setAchiementComplete comp;
     public int score;
     public int numToScore;
 
@@ -49,6 +50,8 @@ public class ballScored : MonoBehaviour
 
     public static void achievementComplete()
     {
+        Debug.Log("Achievement Complete! 1");
         isComplete.isFinished(true);
+        //setAchiementComplete.setActive(true);
     }
 }

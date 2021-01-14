@@ -1,50 +1,32 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class setAchiementComplete : MonoBehaviour
 {
     private static bool isActive = false;
     public bool achievmentCompleted;
+    public Image fillARocket;
 
     void Start()
     {
-        this.gameObject.SetActive(false);
         DontDestroyOnLoad(this.gameObject);
+        //DontDestroyOnLoad(fillARocket);
+
+        fillARocket = GameObject.FindWithTag("Completed").GetComponent<Image>();
+        fillARocket.enabled = false;
     }
 
     void Update()
     {
-        this.gameObject.SetActive(isActive);
+        fillARocket.enabled = isActive;
+
         achievmentCompleted = isActive;
     }
 
     public static void setActive(bool active)
     {
-        if (isActive != active)
-        {
-            isActive = active;
-            //thisObject.SetActive(isActive);
-        }
+        isActive = active;
     }
-
-    /*
-    public static setAchiementComplete()
-    {
-        thisObject = new setAchiementComplete();
-    }
-    
-
-    void Start()
-    {
-        this.gameObject.SetActive(false);
-        thisObject = this.gameObject;
-        DontDestroyOnLoad(thisObject);
-    }
-
-    public static void setActive(bool active)
-    {
-        thisObject.SetActive(active);
-    }
-    */
 }
