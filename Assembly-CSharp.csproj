@@ -78,6 +78,7 @@
     <Compile Include="Assets\Scripts\Game Pieces\totalBallsScored.cs" />
     <Compile Include="Assets\Scripts\Main Menu\Quit.cs" />
     <Compile Include="Assets\Scripts\Main Menu\SwitchScene.cs" />
+    <Compile Include="Assets\Scripts\Main Menu\printline.cs" />
     <Compile Include="Assets\Scripts\PanelManager.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerMainScript.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />

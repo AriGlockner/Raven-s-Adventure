@@ -33,21 +33,6 @@ public class ballScored : MonoBehaviour
         //DontDestroyOnLoad(comp);
     }
 
-    
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.G))
-        {
-            setScore(true);
-            /*
-            score++;
-            if (score == numToScore)
-                achievementComplete();
-            */
-        }            
-    }
-    
-
     public static void achievementComplete()
     {
         Debug.Log("Achievement Complete! 1");
